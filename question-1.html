@@ -37,7 +37,6 @@
 var templateString = document.getElementById('user-data').innerHTML;
 var template = Handlebars.compile(templateString);
 
-
 var promise = $.ajax({
   url: 'http://itp-api.herokuapp.com/api/v1/me'
 });
@@ -49,15 +48,9 @@ promise.then(function(userInfo) {
   });
   document.getElementById('user').innerHTML = html;
 });
-
-
-
 </script>
 
-
-<div id="user">
-
-</div>
+<div id="user"></div>
 
 </body>
 </html>

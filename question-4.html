@@ -25,15 +25,13 @@
 
     var promise2 =  promise.then( function(response){
        // console.log(response);
-        var commentArr =  response.data.map(function( comment ){
+        return response.data.map(function( comment ){
             //console.log( comment );
             return {
                 id: comment.id,
                 body: comment.attributes.body
             };
         });
-
-        return commentArr;
     });
 
     return promise2;
